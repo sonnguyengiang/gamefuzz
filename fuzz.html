@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<img src="https://genk.mediacdn.vn/2019/12/12/photo-1-15761377980501310913025.jpg" height="250" width="400" id="anh1" onclick="changeImg1()"/>
+<img src="https://image.yes24.vn/Upload/ImageZine/Board/phimpokemon2620191.jpg" height="250" width="400" id="anh2" onclick="changeImg2()"/>
+<h1 id="show" style="color: red"></h1>
+<script>
+    let count = 1;
+    let count2 = 1;
+    let anh1 = document.getElementById("anh1");
+    let anh2 = document.getElementById("anh2");
+
+    function changeImg1() {
+        if (count == 1) {
+            anh1.src = 'https://image.yes24.vn/Upload/ImageZine/Board/phimpokemon2620191.jpg'
+            count++;
+        } else {
+            if (count == 2) {
+                anh1.src = 'https://1.bp.blogspot.com/-4l45hfEPAb8/XpyxHlst9CI/AAAAAAAAAYs/mcUwBU6kzCMViLTfQ3KRBeoc3l15N7xzQCEwYBhgLKs0DAL1OcqwODyPVEyl6fRRCA40tdw1ThAwSjG15i5hnFC8qVnRX9saAYNGfc3w7UOjTlGhh3JDtoUnGmEZmZokKWURiXf-jriTrDntkTSvZkPyC69M9RSjZF69MTuiRIcDnzvDjrnBUT33KosQnEZFRuXk_2JoK3TI8fcmCWM0cIJonU6nu8ntQN28SUApbXhO0W6JG4bNSuLIVCmRqt1yr4E5q-xuG5CPO4kkScjBngaacwmuIeaN15nKjVYy-plNo5A6M9JuB6r4pxjPmjAXCtwGoQys48-rOfIhEdtLmRae3sSX0CZX6zEBprHTJopbKEHF8rdsAgEnXkU22pA8wj3Yz9lBzzK5FBlxl7BP-z5W1AjXUx8B-8xPo6osEBxZk_Wuv2Ihs1Lg8brXbWSi-1m0Pps6DvLjJWOwUzWnhJkTUvCa2_g9-SWvUbbtYvjgJx4bbe-cqsEFhKB4XW5seEjBMXWKeE1i0W7ohgaX2LSb7uwSDmvsNw9iFlgZThoQ9s1qumfP98TiCLF8Ml70vk4uyJY8PPjMRIlV4wCMTmFwKal5rXEEkU9A010DrPG5_c_I_Xj4kTcDosKmyNDG7j3nsznUu_TkTpYPQHLUwiOfy9AU/s1600/How-to-draw-Pikachu.jpg'
+                count++;
+            } else {
+                if (count == 3) {
+                    anh1.src = 'https://genk.mediacdn.vn/2019/12/12/photo-1-15761377980501310913025.jpg'
+                    count = 1;
+                }
+            }
+        }
+        check();
+    }
+
+    function changeImg2() {
+        if (count2 == 1) {
+            anh2.src = 'https://image.yes24.vn/Upload/ImageZine/Board/phimpokemon2620191.jpg'
+            count2++;
+        } else {
+            if (count2 == 2) {
+                anh2.src = 'https://1.bp.blogspot.com/-4l45hfEPAb8/XpyxHlst9CI/AAAAAAAAAYs/mcUwBU6kzCMViLTfQ3KRBeoc3l15N7xzQCEwYBhgLKs0DAL1OcqwODyPVEyl6fRRCA40tdw1ThAwSjG15i5hnFC8qVnRX9saAYNGfc3w7UOjTlGhh3JDtoUnGmEZmZokKWURiXf-jriTrDntkTSvZkPyC69M9RSjZF69MTuiRIcDnzvDjrnBUT33KosQnEZFRuXk_2JoK3TI8fcmCWM0cIJonU6nu8ntQN28SUApbXhO0W6JG4bNSuLIVCmRqt1yr4E5q-xuG5CPO4kkScjBngaacwmuIeaN15nKjVYy-plNo5A6M9JuB6r4pxjPmjAXCtwGoQys48-rOfIhEdtLmRae3sSX0CZX6zEBprHTJopbKEHF8rdsAgEnXkU22pA8wj3Yz9lBzzK5FBlxl7BP-z5W1AjXUx8B-8xPo6osEBxZk_Wuv2Ihs1Lg8brXbWSi-1m0Pps6DvLjJWOwUzWnhJkTUvCa2_g9-SWvUbbtYvjgJx4bbe-cqsEFhKB4XW5seEjBMXWKeE1i0W7ohgaX2LSb7uwSDmvsNw9iFlgZThoQ9s1qumfP98TiCLF8Ml70vk4uyJY8PPjMRIlV4wCMTmFwKal5rXEEkU9A010DrPG5_c_I_Xj4kTcDosKmyNDG7j3nsznUu_TkTpYPQHLUwiOfy9AU/s1600/How-to-draw-Pikachu.jpg'
+                count2++;
+            } else {
+                if (count2 == 3) {
+                    anh2.src = 'https://genk.mediacdn.vn/2019/12/12/photo-1-15761377980501310913025.jpg'
+                    count2 = 1;
+                }
+            }
+        }
+        check();
+    }
+
+    function check() {
+        if (anh1.src == anh2.src) {
+            document.getElementById("show").innerText = "Bạn đã thắng"
+        } else {
+            document.getElementById("show").innerText = ""
+
+        }
+    }
+</script>
+</body>
+</html>
